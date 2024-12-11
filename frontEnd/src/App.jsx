@@ -1,8 +1,11 @@
+import Header from "./Components/Header";
+import SectionCta from "./Components/SectionCta";
+
 export default function App() {
   return (
     <>
-      <h1>Olá, Mundo!</h1>
+      <Header></Header>
+      <SectionCta></SectionCta>
     </>
   );
 }
-0;
