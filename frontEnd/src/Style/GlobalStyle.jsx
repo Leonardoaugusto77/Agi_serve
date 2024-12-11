@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', Arial, sans-serif; /* Fontes padrões */
     line-height: 1.6; /* Altura de linha para melhor leitura */
     color: #333; /* Cor do texto padrão */
-    background-color: #f9f9f9; /* Cor de fundo padrão */
+    background-color: #CAC9C7; /* Cor de fundo padrão */
     margin: 0;
     padding: 0;
   }
