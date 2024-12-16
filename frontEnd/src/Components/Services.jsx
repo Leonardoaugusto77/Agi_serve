@@ -1,65 +1,76 @@
 import React, { useState } from "react";
 import { Wrapper } from "../Style/Services.style"; // Importando os estilos
 
+// Importando as imagens corretas
+import copaImage from "../Images/copa.jpg";
+import limpezaPosObra from "../Images/limpezaposobra.jpg";
+import portariaEControle from "../Images/portariaeacesso.jpg";
+import manutencaoAreasVerdes from "../Images/areasverdes.jpg";
+import manutencaoPredial from "../Images/Manutenção Predial.jpg";
+import recepcaoTelefonista from "../Images/Recepção e Telefonista.jpg";
+import limpezaConservacao from "../Images/Limpeza e Conservação.jpg";
+import zeladoriaCondominios from "../Images/Zeladoria para Condomínios.jpg";
+import limpezaEmpresarialResidencial from "../Images/Limpeza Empresarial e Residencial.jpg";
+
 export default function Services() {
   // Estado para gerenciar o card ativo
   const [activeCard, setActiveCard] = useState(null);
 
-  // Dados de exemplo para os serviços
+  // Dados dos serviços (9 itens no total)
   const services = [
     {
       id: 1,
-      title: "Serviço 1",
+      title: "Serviços de Copa",
       description: "Descrição detalhada do serviço 1",
-      image: "/path/to/image1.jpg",
+      image: copaImage,
     },
     {
       id: 2,
-      title: "Serviço 2",
+      title: "Limpeza Pós-Obras",
       description: "Descrição detalhada do serviço 2",
-      image: "/path/to/image2.jpg",
+      image: limpezaPosObra,
     },
     {
       id: 3,
-      title: "Serviço 3",
+      title: "Portaria e Controle de Acessos",
       description: "Descrição detalhada do serviço 3",
-      image: "/path/to/image3.jpg",
+      image: portariaEControle,
     },
     {
       id: 4,
-      title: "Serviço 4",
+      title: "Manutenção em Áreas Verdes",
       description: "Descrição detalhada do serviço 4",
-      image: "/path/to/image4.jpg",
+      image: manutencaoAreasVerdes,
     },
     {
       id: 5,
-      title: "Serviço 5",
+      title: "Manutenção Predial",
       description: "Descrição detalhada do serviço 5",
-      image: "/path/to/image5.jpg",
+      image: manutencaoPredial,
     },
     {
       id: 6,
-      title: "Serviço 6",
+      title: "Recepção e Telefonista",
       description: "Descrição detalhada do serviço 6",
-      image: "/path/to/image6.jpg",
+      image: recepcaoTelefonista,
     },
     {
       id: 7,
-      title: "Serviço 7",
+      title: "Limpeza e Conservação",
       description: "Descrição detalhada do serviço 7",
-      image: "/path/to/image7.jpg",
+      image: limpezaConservacao,
     },
     {
       id: 8,
-      title: "Serviço 8",
+      title: "Zeladoria para Condomínios",
       description: "Descrição detalhada do serviço 8",
-      image: "/path/to/image8.jpg",
+      image: zeladoriaCondominios,
     },
     {
       id: 9,
-      title: "Serviço 9",
+      title: "Limpeza Empresarial e Residencial",
       description: "Descrição detalhada do serviço 9",
-      image: "/path/to/image9.jpg",
+      image: limpezaEmpresarialResidencial,
     },
   ];
 
@@ -85,7 +96,9 @@ export default function Services() {
               activeCard === service.id ? "active" : ""
             }`}
             key={service.id}
-            style={{ backgroundImage: `url(${service.image})` }}
+            style={
+              service.image ? { backgroundImage: `url(${service.image})` } : {}
+            }
           >
             <div className="content">
               <h3>{service.title}</h3>
