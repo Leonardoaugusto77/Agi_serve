@@ -5,10 +5,7 @@ export default function SectionCta() {
   return (
     <Wrapper>
       <div className="cta-content">
-        <h2>
-          Especialistas em <br />
-          serviços terceirizados
-        </h2>
+        <h2>Especialistas em serviços terceirizados</h2>
         <h4>
           Oferecemos soluções em limpeza, conservação e gestão de pessoas,
           promovendo eficiência e bem-estar.

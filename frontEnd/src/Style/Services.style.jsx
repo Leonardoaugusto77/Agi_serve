@@ -46,7 +46,7 @@ export const Wrapper = styled.section`
       text-align: center;
 
       h3 {
-        font-size: 25px;
+        font-size: 20px;
         margin-bottom: 10px;
       }
 
@@ -59,7 +59,7 @@ export const Wrapper = styled.section`
         border-radius: 5px;
         padding: 8px 16px;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 14px;
         transition: background-color 0.3s ease;
 
         &:hover {

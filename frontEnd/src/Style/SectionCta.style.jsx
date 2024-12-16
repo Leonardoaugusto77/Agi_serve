@@ -31,12 +31,12 @@ export const Wrapper = styled.section`
     position: relative;
     z-index: 1;
     text-align: left;
-    max-width: 600px; /* Largura máxima do conteúdo */
+    max-width: 700px; /* Largura máxima do conteúdo */
     padding: 20px;
     color: white;
 
     h2 {
-      font-size: 36px;
+      font-size: 45px;
       font-weight: bold;
       margin-bottom: 20px;
     }

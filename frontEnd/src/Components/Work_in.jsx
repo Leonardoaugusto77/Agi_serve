@@ -28,9 +28,9 @@ export default function WorkIn({ onClose }) {
     <WorkInWrapper>
       <div className="modal-overlay" onClick={onClose}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-          <button className="close-btn" onClick={onClose}>
+          <p className="close-btn" onClick={onClose}>
             X
-          </button>
+          </p>
           <h2>Trabalhe Conosco</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">

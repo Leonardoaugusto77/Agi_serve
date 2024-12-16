@@ -117,7 +117,9 @@ export default function Services() {
                   </button>
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
-                  <button onClick={() => setActiveCard(null)}>Fechar</button>
+                  <button onClick={() => setActiveCard(null)}>
+                    Entrar em contato!
+                  </button>
                 </div>
               </div>
             )}

@@ -27,9 +27,15 @@ export const WorkInWrapper = styled.div`
     position: relative;
     z-index: 10000;
     color: #333; /* Cor do texto preta */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o conteúdo fique bem distribuído */
   }
 
+  /* X de fechamento */
   .close-btn {
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -37,9 +43,10 @@ export const WorkInWrapper = styled.div`
     border: none;
     font-size: 24px;
     color: red;
-    cursor: pointer;
+    cursor: pointer; /* Adicionando cursor para indicar que é clicável */
   }
 
+  /* Título */
   h2 {
     margin-bottom: 20px;
     font-size: 24px;
@@ -47,10 +54,12 @@ export const WorkInWrapper = styled.div`
     color: #032541; /* Cor do título */
   }
 
+  /* Formulário */
   form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    justify-content: center; /* Centraliza o conteúdo do formulário */
 
     .form-group {
       display: flex;
@@ -65,7 +74,7 @@ export const WorkInWrapper = styled.div`
       }
 
       input,
-      select,  /* Adicionando estilo para o select */
+      select, /* Adicionando estilo para o select */
       textarea {
         padding: 12px;
         font-size: 16px;
@@ -87,6 +96,8 @@ export const WorkInWrapper = styled.div`
     }
 
     button {
+      width: 300px;
+      height: 50px;
       padding: 12px;
       background-color: #032541;
       color: white;
@@ -95,6 +106,7 @@ export const WorkInWrapper = styled.div`
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
+      align-self: center; /* Garante que o botão de envio fique centralizado */
 
       &:hover {
         background-color: #0056b3;

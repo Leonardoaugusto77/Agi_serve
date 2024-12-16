@@ -29,6 +29,8 @@ export const Wrapper = styled.section`
 
   /* Botão Trabalhe Conosco */
   button {
+    width: 300px;
+    height: 80px;
     padding: 15px 30px;
     font-size: 20px;
     background-color: #032541; /* Cor de fundo azul com opacidade */
