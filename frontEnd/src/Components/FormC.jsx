@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Wrapper } from "../Style/FormC.style"; // Importando os estilos
 
-export default function FormC() {
+const FormC = React.forwardRef((props, ref) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,20 +11,16 @@ export default function FormC() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você pode enviar os dados do formulário para o backend ou realizar alguma ação
     console.log(formData);
   };
 
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <h2>Entre em contato!</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -75,4 +71,6 @@ export default function FormC() {
       </form>
     </Wrapper>
   );
-}
+});
+
+export default FormC;

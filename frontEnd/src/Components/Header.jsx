@@ -1,35 +1,18 @@
 import { WrapperHeader } from "../Style/Wrapperheader.style";
 import Logo from "../Images/agi.jpeg";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
-export default function Header() {
+export default function Header({
+  onContactClick,
+  onServicesClick,
+  onWorkInClick,
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null); // Ref para o menu dropdown
-  const hamburgerRef = useRef(null); // Ref para o hambúrguer
 
   // Função para alternar a visibilidade do menu
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen); // Alterna o estado do menu
   };
-
-  // Função para fechar o menu se o clique for fora do hambúrguer ou do menu dropdown
-  const handleClickOutside = (event) => {
-    if (
-      menuRef.current &&
-      !menuRef.current.contains(event.target) && // Clique fora do menu dropdown
-      !hamburgerRef.current.contains(event.target) // Clique fora do hambúrguer
-    ) {
-      setIsMenuOpen(false); // Fecha o menu
-    }
-  };
-
-  // Adiciona o event listener para detectar cliques fora do menu
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
 
   return (
     <WrapperHeader>
@@ -41,8 +24,7 @@ export default function Header() {
       {/* Menu hambúrguer no lado direito */}
       <div
         className="menu-hamburger"
-        onClick={toggleMenu}
-        ref={hamburgerRef} // Referência ao hambúrguer
+        onClick={toggleMenu} // Alterna o estado do menu
       >
         <span></span>
         <span></span>
@@ -51,12 +33,14 @@ export default function Header() {
 
       {/* Dropdown menu */}
       {isMenuOpen && (
-        <div className="menu-dropdown" ref={menuRef}>
+        <div className="menu-dropdown">
           <ul>
-            <li>Entre em contato</li>
-            <li>Trabalhe conosco</li>
-            <li>Nossos serviços</li>
-            <li>Contatos</li>
+            <li onClick={onContactClick}>Contate-nos</li>{" "}
+            {/* Aciona a rolagem até "Contate-nos" */}
+            <li onClick={onWorkInClick}>Trabalhe conosco</li>{" "}
+            {/* Abre o pop-up "Trabalhe Conosco" */}
+            <li onClick={onServicesClick}>Nossos serviços</li>{" "}
+            {/* Aciona a rolagem até "Nossos serviços" */}
             <li>Redes sociais</li>
           </ul>
         </div>
