@@ -13,13 +13,11 @@ import WorkIn from "./Components/Work_in"; // Importando o pop-up
 export default function App() {
   const [isJoinUsVisible, setIsJoinUsVisible] = useState(false); // Controla a visibilidade do pop-up
   const contactRef = useRef(null); // Referência para a seção de "Contate-nos"
-  const servicesRef = useRef(null); // Referência para a seção de "Nossos serviços"
-  const footerRef = useRef(null); // Referência para o footer
+  const servicesRef = useRef(null);
+  const footerRef = useRef(null);
 
-  // Função para rolar até uma seção específica
   const scrollToSection = (section) => {
     if (section && section.current) {
-      // Verifica se a ref está definida
       window.scrollTo({
         top: section.current.offsetTop,
         behavior: "smooth",
@@ -27,12 +25,10 @@ export default function App() {
     }
   };
 
-  // Função para abrir o pop-up "Trabalhe Conosco"
   const handleOpenJoinUs = () => {
     setIsJoinUsVisible(true);
   };
 
-  // Função para fechar o pop-up "Trabalhe Conosco"
   const handleCloseJoinUs = () => {
     setIsJoinUsVisible(false);
   };
@@ -40,17 +36,17 @@ export default function App() {
   return (
     <>
       <Header
-        onContactClick={() => scrollToSection(contactRef)} // Passa para a seção de "Contate-nos"
-        onServicesClick={() => scrollToSection(servicesRef)} // Passa para a seção de "Nossos Serviços"
-        onWorkInClick={handleOpenJoinUs} // Abre o pop-up "Trabalhe Conosco"
-        scrollToFooter={() => scrollToSection(footerRef)} // Footer
+        onContactClick={() => scrollToSection(contactRef)}
+        onServicesClick={() => scrollToSection(servicesRef)}
+        onWorkInClick={handleOpenJoinUs}
+        scrollToFooter={() => scrollToSection(footerRef)}
       />
       <SectionCta onContactClick={() => scrollToSection(contactRef)} />{" "}
       {/* Adicionado */}
       <MissionSection />
-      <Services ref={servicesRef} /> {/* Usando a ref para "Nossos serviços" */}
+      <Services ref={servicesRef} />
       <Vsl />
-      <FormC ref={contactRef} /> {/* Usando a ref para "Contate-nos" */}
+      <FormC ref={contactRef} />
       <JoinUs />
       <Footer ref={footerRef} />
       <Credits />
