@@ -21,7 +21,7 @@ const FormC = React.forwardRef((props, ref) => {
 
   return (
     <Wrapper ref={ref}>
-      <h2>Entre em contato!</h2>
+      <h2>Solicite seu orçamento!</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Nome:</label>
@@ -57,7 +57,7 @@ const FormC = React.forwardRef((props, ref) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="serviceType">Tipo de Serviço:</label>
+          <label htmlFor="serviceType">Descrição do Serviço:</label>
           <textarea
             id="serviceType"
             name="serviceType"
@@ -67,7 +67,7 @@ const FormC = React.forwardRef((props, ref) => {
             required
           />
         </div>
-        <button type="submit">Entrar em contato</button>
+        <button type="submit">Solicitar orçamento</button>
       </form>
     </Wrapper>
   );

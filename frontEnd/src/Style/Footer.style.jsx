@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import Logo from "../Images/agi.jpeg"; // Logo da empresa
 
 export const Wrapper = styled.footer`
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Alinha as seções no topo */
-  background-color: #032541; /* Cor de fundo do footer */
+  align-items: flex-start;
+  background-color: #032541;
   color: white;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
@@ -13,7 +12,6 @@ export const Wrapper = styled.footer`
   .footer-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 20px;
   }
@@ -21,7 +19,7 @@ export const Wrapper = styled.footer`
   /* Parte 1 - Logo e Texto */
   .logo-section {
     img {
-      width: 150px; /* Ajuste o tamanho da logo */
+      width: 150px;
       margin-bottom: 20px;
     }
 
@@ -29,7 +27,7 @@ export const Wrapper = styled.footer`
       font-size: 14px;
       line-height: 1.6;
       max-width: 300px;
-      margin: 0; /* Remover margem extra */
+      margin: 0;
     }
   }
 
@@ -48,74 +46,82 @@ export const Wrapper = styled.footer`
       li {
         font-size: 16px;
         margin: 5px 0;
-      }
-    }
-  }
 
-  /* Parte 3 - Redes sociais e Horários */
-  .social-hours-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px; /* Ajusta a distância entre as partes */
+        a {
+          color: white;
+          text-decoration: none;
 
-    /* Redes sociais */
-    .social-media {
-      a {
-        color: white;
-        font-size: 16px;
-        margin: 5px 0;
-        text-decoration: none;
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: #007bff; /* Alterar cor ao passar o mouse */
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
+  }
 
-    /* Horário */
-    .hours {
-      margin-top: 20px;
+  /* Parte 3 - Redes sociais */
+  .social-media-section {
+    h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
 
-      h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
 
-      p {
+      li {
         font-size: 16px;
+        margin: 5px 0;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            color: #007bff;
+          }
+        }
       }
     }
   }
 
-  /* Responsividade para dispositivos móveis */
+  /* Parte 4 - Horário */
+  .hours-section {
+    h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  /* Responsividade */
   @media (max-width: 768px) {
-    flex-direction: column; /* Empilha as seções em telas menores */
+    flex-direction: column;
     padding: 30px 10px;
 
     .footer-section {
-      width: 100%; /* Ocupa toda a largura da tela */
-      margin-bottom: 20px; /* Espaçamento entre as seções */
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 
   @media (max-width: 480px) {
     padding: 20px 10px;
 
-    .logo-section p {
-      font-size: 12px;
-    }
+    .footer-section {
+      h3 {
+        font-size: 16px;
+      }
 
-    .contact-section h3,
-    .social-hours-section h3 {
-      font-size: 16px;
-    }
-
-    .contact-section ul li,
-    .social-media a,
-    .hours p {
-      font-size: 14px;
+      p,
+      li {
+        font-size: 14px;
+      }
     }
   }
 `;

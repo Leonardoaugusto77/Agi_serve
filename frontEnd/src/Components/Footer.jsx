@@ -51,47 +51,46 @@ const Footer = React.forwardRef((props, ref) => {
           </li>
         </ul>
       </div>
-      {/* Parte 3 - Redes sociais e Horário */}
-      <div className="footer-section social-hours-section">
-        <div className="social-media">
-          <h3>Redes Sociais</h3>
-          <ul>
-            <li>
-              <a
-                href={socialLinks?.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar página do Facebook"
-              >
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a
-                href={socialLinks?.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar página do Instagram"
-              >
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a
-                href={socialLinks?.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar página do LinkedIn"
-              >
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="hours">
-          <h3>Horário</h3>
-          <p>Segunda a Sexta: 08:00 - 18:00</p>
-        </div>
+      {/* Parte 3 - Redes Sociais */}
+      <div className="footer-section social-media-section">
+        <h3>Redes Sociais</h3>
+        <ul>
+          <li>
+            <a
+              href={socialLinks?.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar página do Facebook"
+            >
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a
+              href={socialLinks?.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar página do Instagram"
+            >
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a
+              href={socialLinks?.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar página do LinkedIn"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+      {/* Parte 4 - Horário */}
+      <div className="footer-section hours-section">
+        <h3>Horário</h3>
+        <p>Segunda a Sexta: 08:00 - 18:00</p>
       </div>
     </Wrapper>
   );
