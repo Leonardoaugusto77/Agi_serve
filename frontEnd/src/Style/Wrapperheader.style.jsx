@@ -80,6 +80,7 @@ export const WrapperHeader = styled.div`
     }
 
     .menu-dropdown {
+      z-index: 999999;
       right: 15px;
     }
   }

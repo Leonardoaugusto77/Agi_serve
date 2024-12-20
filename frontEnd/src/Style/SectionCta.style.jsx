@@ -5,8 +5,8 @@ export const Wrapper = styled.section`
   width: 100%;
   height: 500px; /* Ajuste a altura conforme necessário */
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
   position: relative;
   background-image: url(${HeadB}); /* Substitua pelo caminho correto da imagem */
   background-size: cover;
@@ -30,7 +30,7 @@ export const Wrapper = styled.section`
   .cta-content {
     position: relative;
     z-index: 1;
-    text-align: left;
+    text-align: center; /* Centraliza o texto */
     max-width: 700px; /* Largura máxima do conteúdo */
     padding: 20px;
     color: white;
@@ -72,7 +72,7 @@ export const Wrapper = styled.section`
 
     .cta-content {
       max-width: 90%;
-      text-align: center;
+      text-align: center; /* Texto centralizado */
     }
 
     .cta-content h2 {
@@ -89,14 +89,17 @@ export const Wrapper = styled.section`
   }
 
   @media (max-width: 480px) {
+    width: 100%;
     height: 300px;
 
     .cta-content h2 {
-      font-size: 24px;
+      font-size: 20px;
+      font-weight: bold;
     }
 
     .cta-content h4 {
-      font-size: 16px;
+      font-size: 12px;
+      font-weight: 400;
     }
 
     .cta-button {

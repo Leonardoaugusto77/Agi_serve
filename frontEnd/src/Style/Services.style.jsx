@@ -16,13 +16,23 @@ export const Wrapper = styled.section`
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 0 20px;
+    justify-items: center; /* Garante que os cards fiquem centralizados na tela */
+    max-width: 1200px; /* Limita a largura da grid para evitar que ocupe toda a tela em dispositivos grandes */
+    margin: 0 auto; /* Centraliza a grid */
 
     @media (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
+      padding: 0 10px; /* Ajusta o espaçamento para telas menores */
     }
 
     @media (max-width: 480px) {
       grid-template-columns: 1fr;
+      padding: 0 10px;
+    }
+
+    @media (max-width: 400px) {
+      grid-template-columns: 1fr; /* Garantir um único card por linha em telas pequenas */
+      padding: 0 10px;
     }
   }
 
@@ -39,8 +49,9 @@ export const Wrapper = styled.section`
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que o card ocupe 100% da largura disponível dentro do grid */
+    max-width: 300px; /* Limita o tamanho máximo do card para que não fique muito grande em telas maiores */
 
-    /* Fundo escuro será aplicado em um pseudo-elemento */
     &::before {
       content: "";
       position: absolute;
@@ -48,19 +59,31 @@ export const Wrapper = styled.section`
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6); /* Fundo escuro 60% */
-      z-index: 1; /* Este fundo escuro deve ficar abaixo do conteúdo */
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
     }
 
     .content {
-      z-index: 2; /* Garantir que o conteúdo tenha a prioridade de aparecer sobre o fundo escuro */
+      z-index: 2;
       position: relative;
       text-align: center;
+      display: flex;
+      flex-direction: column; /* Coloca os elementos (h3, p, button) em coluna */
+      justify-content: center; /* Alinha os itens verticalmente no centro */
+      align-items: center; /* Alinha os itens horizontalmente no centro */
+      height: 100%; /* Garante que a área seja ocupada completamente pelo conteúdo */
 
       h3 {
         font-size: 20px;
         margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra no título */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        color: white;
       }
 
       button {
@@ -93,6 +116,7 @@ export const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     z-index: 999;
+    overflow: hidden; /* Impede o scroll quando o modal estiver ativo */
   }
 
   .modal-content {
@@ -102,11 +126,15 @@ export const Wrapper = styled.section`
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 600px;
-    width: 100%;
-    height: 350px;
-    position: relative; /* Para posicionar o X no topo direito */
+    width: 90%; /* Deixa o modal com 90% da largura da tela */
+    max-width: 600px; /* Limita o tamanho máximo do modal */
+    height: 400px; /* Altura ajustada do modal */
+    position: relative;
     color: white;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    justify-content: center; /* Alinha os elementos verticalmente no centro */
+    align-items: center; /* Alinha os elementos horizontalmente no centro */
 
     &::before {
       content: "";
@@ -115,15 +143,15 @@ export const Wrapper = styled.section`
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8); /* Fundo escuro 60% */
-      z-index: -1; /* Deve ficar abaixo do conteúdo */
+      background: rgba(0, 0, 0, 0.8);
+      z-index: -1;
     }
 
     h3 {
       font-size: 30px;
       margin-bottom: 20px;
       z-index: 2;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra no título */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     p {
@@ -145,6 +173,7 @@ export const Wrapper = styled.section`
       padding: 8px 16px;
       cursor: pointer;
       z-index: 2;
+
       &:hover {
         background-color: #0056b3;
         transition: 1s;
@@ -164,7 +193,80 @@ export const Wrapper = styled.section`
     }
   }
 
-  /* Ajustes para dispositivos móveis */
+  @media (max-width: 375px) {
+    h2 {
+      font-size: 28px;
+    }
+
+    .service-card {
+      height: 200px;
+
+      .content {
+        h3 {
+          font-size: 18px;
+        }
+
+        button {
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .modal-content {
+      height: 400px;
+      h3 {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .service-card {
+      height: 250px;
+      .content {
+        h3 {
+          font-size: 20px;
+        }
+
+        button {
+          padding: 8px 16px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    h2 {
+      font-size: 35px;
+    }
+
+    .service-card {
+      height: 200px;
+
+      .content {
+        h3 {
+          font-size: 18px;
+        }
+
+        button {
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
   @media (max-width: 375px) {
     h2 {
       font-size: 28px;

@@ -6,7 +6,8 @@ export default function WorkIn({ onClose }) {
     nome: "",
     email: "",
     telefone: "",
-    cargo: "", // Alterado de 'mensagem' para 'cargo'
+    cargo: "", // Cargo desejado como campo de texto
+    curriculo: null, // Novo campo para o arquivo do currículo
   });
 
   const handleChange = (e) => {
@@ -14,6 +15,14 @@ export default function WorkIn({ onClose }) {
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
+    }));
+  };
+
+  const handleFileChange = (e) => {
+    const { name, files } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: files[0], // Atualiza o estado com o arquivo selecionado
     }));
   };
 
@@ -68,19 +77,25 @@ export default function WorkIn({ onClose }) {
             </div>
             <div className="form-group">
               <label htmlFor="cargo">Cargo Desejado:</label>
-              <select
+              <input
+                type="text"
                 id="cargo"
                 name="cargo"
                 value={formData.cargo}
                 onChange={handleChange}
                 required
-              >
-                <option value="">Selecione</option>
-                <option value="auxiliar_de_limpeza">Auxiliar de Limpeza</option>
-                <option value="pedreiro">Pedreiro</option>
-                <option value="copeira">Copeira</option>
-                <option value="porteiro">Porteiro</option>
-              </select>
+                placeholder="Digite o cargo desejado"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="curriculo">Envie seu Currículo:</label>
+              <input
+                type="file"
+                id="curriculo"
+                name="curriculo"
+                onChange={handleFileChange}
+                required
+              />
             </div>
             <button type="submit">Enviar</button>
           </form>

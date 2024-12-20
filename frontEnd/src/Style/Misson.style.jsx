@@ -5,6 +5,7 @@ export const Wrapper = styled.section`
   padding: 50px 20px;
   position: relative;
   text-align: center;
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as bordas */
 
   .mission-content {
     text-align: center;
@@ -15,7 +16,7 @@ export const Wrapper = styled.section`
     h2 {
       font-size: 36px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: #032541;
     }
 
@@ -36,12 +37,14 @@ export const Wrapper = styled.section`
     &::before {
       content: "";
       position: absolute;
-      width: 100vw;
+      width: 100vw; /* Largura total da tela */
       height: 95px;
       background-color: #032541;
       z-index: 1;
       top: 50%;
       transform: translateY(-50%);
+      left: 50%; /* Começa no meio da tela */
+      margin-left: -50vw; /* Move a faixa para que ela se estenda além das bordas */
     }
 
     .image-placeholder {
@@ -80,19 +83,25 @@ export const Wrapper = styled.section`
 
   @media (max-width: 480px) {
     .image-section {
+      width: 100%;
       flex-direction: column;
+      margin-bottom: -60px;
     }
 
     .image-section .image-placeholder {
       margin: 10px 0;
+      width: 250px; /* Ajuste de largura para a imagem */
+      height: 250px; /* Ajuste de altura para a imagem */
+      object-fit: cover; /* Garante que a imagem mantenha a proporção sem distorção */
     }
 
     .mission-content h2 {
-      font-size: 24px;
+      font-size: 35px;
     }
 
     .mission-content p {
-      font-size: 16px;
+      font-size: 15px;
+      color: #333;
     }
   }
 `;

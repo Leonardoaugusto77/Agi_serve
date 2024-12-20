@@ -18,11 +18,11 @@ export const WorkInWrapper = styled.div`
   /* Modal */
   .modal-content {
     background-color: #fff; /* Alterado para fundo branco */
-    padding: 20px;
-    border-radius: 8px;
-    width: 390px;
-    height: 520px;
-    max-width: 90%; /* Para dispositivos menores */
+    padding: 30px;
+    border-radius: 2px;
+    width: 700px;
+    height: 620px;
+    max-width: 100%; /* Para dispositivos menores */
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 10000;
@@ -83,15 +83,11 @@ export const WorkInWrapper = styled.div`
         width: 100%; /* Ajustado para 100% para ocupar toda a largura da modal */
       }
 
-      select {
-        -webkit-appearance: none; /* Remove a aparência padrão do select no Safari */
-        -moz-appearance: none; /* Remove a aparência padrão do select no Firefox */
-        appearance: none; /* Remove a aparência padrão em outros navegadores */
-      }
-
-      textarea {
-        resize: vertical;
-        min-height: 100px;
+      input[type="file"] {
+        padding: 5px;
+        font-size: 14px;
+        border: none;
+        background-color: transparent;
       }
     }
 
