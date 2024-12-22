@@ -23,4 +23,30 @@ export const Wrapper = styled.footer`
       color: #0056b3; /* Cor do link ao passar o mouse */
     }
   }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    padding: 15px 0;
+
+    p {
+      font-size: 16px; /* Aumenta um pouco o tamanho da fonte em telas menores */
+    }
+
+    a {
+      font-size: 16px; /* Ajusta o tamanho do link */
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 0;
+
+    p {
+      font-size: 14px; /* Ajusta o tamanho da fonte em telas muito pequenas */
+      font-weight: bold;
+    }
+
+    a {
+      font-size: 16px; /* Ajusta o tamanho do link */
+    }
+  }
 `;

@@ -8,12 +8,15 @@ export const Wrapper = styled.footer`
   color: white;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
+  flex-wrap: wrap; /* Permite que os itens se reorganizem em dispositivos menores */
 
   .footer-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
+    flex: 1; /* Permite que as seções cresçam de maneira proporcional */
+    min-width: 200px; /* Garante que as seções não fiquem muito pequenas */
   }
 
   /* Parte 1 - Logo e Texto */
@@ -108,6 +111,10 @@ export const Wrapper = styled.footer`
       width: 100%;
       margin-bottom: 20px;
     }
+
+    .logo-section p {
+      max-width: 100%;
+    }
   }
 
   @media (max-width: 480px) {
@@ -122,6 +129,13 @@ export const Wrapper = styled.footer`
       li {
         font-size: 14px;
       }
+    }
+
+    .social-media-section ul,
+    .contact-section ul {
+      display: flex;
+      flex-direction: column; /* As listas ficam empilhadas */
+      align-items: flex-start;
     }
   }
 `;

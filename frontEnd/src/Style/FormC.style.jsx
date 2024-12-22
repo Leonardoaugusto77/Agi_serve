@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
-  width: 50%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 600px; /* Ajuste o tamanho máximo */
   margin: 0 auto 100px;
   padding: 20px;
   text-align: center;
@@ -18,6 +18,7 @@ export const Wrapper = styled.section`
     flex-direction: column;
     gap: 20px;
     text-align: left;
+    width: 100%; /* Garante que o formulário ocupe 100% da largura do container */
 
     .form-group {
       display: flex;
@@ -44,8 +45,9 @@ export const Wrapper = styled.section`
     }
 
     button {
-      width: 310px;
-      height: 70px;
+      width: 100%;
+      max-width: 320px; /* Limita a largura do botão */
+      height: 60px;
       padding: 12px 25px;
       font-size: 18px;
       background-color: #032541;
@@ -56,8 +58,6 @@ export const Wrapper = styled.section`
       transition: background-color 0.3s;
       margin: 0 auto;
       display: block;
-      position: relative;
-      top: 15px; /* Ajustando o valor para 15px */
 
       &:hover {
         background-color: #0056b3;
@@ -68,6 +68,7 @@ export const Wrapper = styled.section`
   /* Responsividade */
   @media (max-width: 768px) {
     padding: 15px;
+    max-width: 90%; /* Maior flexibilidade em telas menores */
 
     h2 {
       font-size: 30px;
