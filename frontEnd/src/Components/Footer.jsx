@@ -1,25 +1,39 @@
 import React from "react";
+
+import {
+  Wrapper,
+  LogoContainer,
+  ContactContainer,
+  SocialContainer,
+  HoursContainer,
+} from "../Style/Footer.style";
+
 import Logo from "../Images/Logo.png"; // Logo da empresa
-import { Wrapper } from "../Style/Footer.style"; // Importando o styled-component
 
 const Footer = React.forwardRef((props, ref) => {
   const { socialLinks } = props;
 
   return (
     <Wrapper ref={ref}>
-      <div className="footer-section logo-section">
-        <img
-          src={Logo}
-          alt="Logo da Agi Serve, empresa especializada em terceirização de serviços de limpeza e manutenção"
-        />
-        <p>
-          A Agi Serve Terceirização de Mão de Obra está preparada para realizar
-          serviços de limpeza e manutenção de acordo com a necessidade de seus
-          clientes.
-        </p>
-      </div>
-      {/* Parte 2 - Contatos */}
-      <div className="footer-section contact-section">
+      {/* Logo e Descrição */}
+      <LogoContainer>
+        <div className="logo">
+          <img
+            src={Logo}
+            alt="Logo da Agi Serve, empresa especializada em terceirização de serviços de limpeza e manutenção"
+          />
+        </div>
+        <div className="description">
+          <p>
+            A Agi Serve Terceirização de Mão de Obra está preparada para
+            realizar serviços de limpeza e manutenção de acordo com a
+            necessidade de seus clientes.
+          </p>
+        </div>
+      </LogoContainer>
+
+      {/* Contatos */}
+      <ContactContainer>
         <h3>Contatos</h3>
         <ul>
           <li>
@@ -47,9 +61,10 @@ const Footer = React.forwardRef((props, ref) => {
             </a>
           </li>
         </ul>
-      </div>
-      {/* Parte 3 - Redes Sociais */}
-      <div className="footer-section social-media-section">
+      </ContactContainer>
+
+      {/* Redes Sociais */}
+      <SocialContainer>
         <h3>Redes Sociais</h3>
         <ul>
           <li>
@@ -83,12 +98,13 @@ const Footer = React.forwardRef((props, ref) => {
             </a>
           </li>
         </ul>
-      </div>
-      {/* Parte 4 - Horário */}
-      <div className="footer-section hours-section">
+      </SocialContainer>
+
+      {/* Horários */}
+      <HoursContainer>
         <h3>Horário</h3>
         <p>Segunda a Sexta: 08:00 - 18:00</p>
-      </div>
+      </HoursContainer>
     </Wrapper>
   );
 });
