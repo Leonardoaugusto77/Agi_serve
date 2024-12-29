@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { WrapperHeader } from "../Style/Wrapperheader.style";
-import Logo from "../Images/agi.jpeg";
+import Logo from "../Images/Logo.png";
 
 export default function Header({
   onContactClick,
@@ -38,7 +38,7 @@ export default function Header({
   return (
     <WrapperHeader>
       <div className="logo">
-        <img src={Logo} alt="Logo" width={150} />
+        <img src={Logo} alt="Logo" width={210} />
       </div>
       <div className="menu-hamburger" onClick={toggleMenu} ref={menuButtonRef}>
         <span></span>

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../Images/agi.jpeg"; // Logo da empresa
+import Logo from "../Images/Logo.png"; // Logo da empresa
 import { Wrapper } from "../Style/Footer.style"; // Importando o styled-component
 
 const Footer = React.forwardRef((props, ref) => {
@@ -7,9 +7,6 @@ const Footer = React.forwardRef((props, ref) => {
 
   return (
     <Wrapper ref={ref}>
-      {" "}
-      {/* Garantindo que a ref esteja no wrapper */}
-      {/* Parte 1 - Logo e Texto */}
       <div className="footer-section logo-section">
         <img
           src={Logo}

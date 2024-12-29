@@ -23,7 +23,6 @@ export const Wrapper = styled.footer`
   .logo-section {
     img {
       width: 150px;
-      margin-bottom: 20px;
     }
 
     p {
