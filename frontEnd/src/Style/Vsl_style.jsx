@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const VslWrapper = styled.section`
-  /* Container principal */
   .vsl-container {
     display: flex;
+    height: 300px;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 40px; /* Espaçamento interno do container */
     gap: 20px;
     background-color: #f9f9f9;
@@ -18,20 +18,19 @@ export const VslWrapper = styled.section`
   /* Estilo para a descrição */
   .vsl-description {
     flex: 1; /* Ocupa o lado esquerdo */
-    max-width: 65%; /* Limita o tamanho no layout maior */
+    max-width: 80%; /* Limita o tamanho no layout maior */
     color: #333;
     padding-left: 40px; /* Afastamento das bordas esquerda e direita */
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho */
-    text-align: left; /* Alinha o texto à esquerda em telas grandes */
+    text-align: center; /* Alinha o texto à esquerda em telas grandes */
     overflow-wrap: break-word; /* Garante que o texto não quebre o layout */
   }
 
   p {
     width: 100%; /* Garante que o parágrafo ocupe toda a largura disponível */
-    font-size: 25px;
+    font-size: 30px;
     line-height: 1.6;
     font-weight: 500;
-    text-align: left;
     margin-bottom: 20px; /* Adiciona espaçamento abaixo do parágrafo */
   }
 
