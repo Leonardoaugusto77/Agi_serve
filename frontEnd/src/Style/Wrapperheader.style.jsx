@@ -7,9 +7,8 @@ export const WrapperHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px; /* Espaçamento lateral consistente com a seção CTA */
+  padding: 0 50px;
 
-  /* Estilo da logo */
   .logo {
     font-size: 24px;
     justify-content: flex-start;
@@ -17,6 +16,11 @@ export const WrapperHeader = styled.div`
     color: #333;
     display: flex;
     align-items: center; /* Para alinhar verticalmente a logo com os outros elementos */
+
+    img {
+      width: 180px;
+      margin-left: 2px;
+    }
   }
 
   /* Estilo do menu hambúrguer */

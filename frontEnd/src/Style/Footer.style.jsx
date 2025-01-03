@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Wrapper = styled.footer`
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
   background-color: #032541;
   color: white;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
-  gap: 50px;
+  gap: 100px;
 
   @media (max-width: 1024px) {
     gap: 30px; /* Reduz o espaço entre seções em tablets */
@@ -34,8 +34,8 @@ export const LogoContainer = styled.div`
   align-items: flex-start;
 
   .logo img {
-    width: 200px; /* Tamanho fixo da imagem */
-    margin-bottom: 10px;
+    width: 300px; /* Tamanho fixo da imagem */
+    margin-bottom: 40px;
   }
 
   .description p {
