@@ -71,7 +71,7 @@ export const Wrapper = styled.section`
     padding: 0 15px; /* Ajuste o padding para telas menores */
 
     .cta-content {
-      max-width: 90%;
+      max-width: 100%;
       text-align: center; /* Centraliza o texto em dispositivos móveis */
     }
 
@@ -80,11 +80,11 @@ export const Wrapper = styled.section`
     }
 
     .cta-content h4 {
-      font-size: 18px;
+      font-size: 14px;
     }
 
     .cta-button {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 

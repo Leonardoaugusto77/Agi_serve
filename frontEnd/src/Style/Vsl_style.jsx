@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const VslWrapper = styled.section`
   .vsl-container {
     display: flex;
-    height: auto; /* Altura ajustável para dispositivos menores */
+    height: 400px; /* Altura ajustável para dispositivos menores */
     align-items: center;
     justify-content: center;
     flex-wrap: wrap; /* Reorganiza em dispositivos menores */
@@ -25,7 +25,7 @@ export const VslWrapper = styled.section`
   }
 
   p {
-    font-size: 28px; /* Tamanho base do texto */
+    font-size: 30px; /* Tamanho base do texto */
     line-height: 1.6;
     font-weight: 500;
     margin: 0; /* Remove margens extras */
@@ -54,6 +54,9 @@ export const VslWrapper = styled.section`
       max-width: 100%;
       font-size: 22px; /* Ajusta o tamanho do texto */
       padding: 0 10px;
+      p {
+        font-size: 25px;
+      }
     }
   }
 

@@ -22,7 +22,15 @@ export const Wrapper = styled.section`
 
     @media (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
-      padding: 0 10px; /* Ajusta o espaçamento para telas menores */
+      padding: 0 10px;
+
+      .content h3 {
+        font-size: 15px !important;
+      }
+      button {
+        width: 150px !important;
+        font-size: 14px !important;
+      }
     }
 
     @media (max-width: 480px) {

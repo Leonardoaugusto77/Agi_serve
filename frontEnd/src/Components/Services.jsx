@@ -11,10 +11,8 @@ import zeladoriaCondominios from "../Images/Zeladoria para Condomínios.jpg";
 import limpezaEmpresarialResidencial from "../Images/Limpeza Empresarial e Residencial.jpg";
 
 const Services = React.forwardRef((props, ref) => {
-  // Estado para gerenciar o card ativo
   const [activeCard, setActiveCard] = useState(null);
 
-  // Dados dos serviços (9 itens no total)
   const services = [
     {
       id: 1,
