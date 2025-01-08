@@ -79,15 +79,24 @@ const Services = React.forwardRef((props, ref) => {
     },
   ];
 
-  // Função para lidar com a exibição de mais detalhes
   const handleShowMore = (id) => {
     setActiveCard(id === activeCard ? null : id);
   };
 
-  // Função para fechar o modal ao clicar fora
   const handleCloseModal = (e) => {
     if (e.target.classList.contains("modal-overlay")) {
       setActiveCard(null);
+    }
+  };
+
+  const handleContactClick = () => {
+    setActiveCard(null); // Fecha o modal
+    if (props.formRef && props.formRef.current) {
+      // Scroll para o formulário
+      window.scrollTo({
+        top: props.formRef.current.offsetTop,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -119,7 +128,7 @@ const Services = React.forwardRef((props, ref) => {
                   </p>
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
-                  <button onClick={() => setActiveCard(null)}>
+                  <button onClick={handleContactClick}>
                     Entrar em contato!
                   </button>
                 </div>
