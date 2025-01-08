@@ -80,7 +80,7 @@ export const Wrapper = styled.section`
     }
 
     .cta-content h4 {
-      font-size: 14px;
+      font-size: 20px;
     }
 
     .cta-button {

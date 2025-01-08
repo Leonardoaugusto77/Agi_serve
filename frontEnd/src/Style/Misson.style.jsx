@@ -91,7 +91,7 @@ export const Wrapper = styled.section`
     .image-section .image-placeholder {
       margin: 10px 0;
       width: 250px; /* Ajuste de largura para a imagem */
-      height: 250px; /* Ajuste de altura para a imagem */
+      height: 200px; /* Ajuste de altura para a imagem */
       object-fit: cover; /* Garante que a imagem mantenha a proporção sem distorção */
     }
 

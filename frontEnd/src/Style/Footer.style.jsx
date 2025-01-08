@@ -18,12 +18,28 @@ export const Wrapper = styled.footer`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px; /* Espaçamento reduzido em dispositivos menores */
+    gap: 20px;
+
+    .description {
+      p {
+        text-align: center !important;
+        font-size: 20px !important;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .description {
+      p {
+        text-align: center !important;
+        font-size: 18px !important;
+      }
+    }
   }
 
   @media (max-width: 360px) {
-    padding: 20px 10px; /* Reduz o padding em dispositivos muito pequenos */
-    gap: 15px; /* Ajusta o espaçamento para telas de 360px */
+    padding: 20px 10px;
+    gap: 15px;
   }
 `;
 

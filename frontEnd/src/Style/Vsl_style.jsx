@@ -69,10 +69,10 @@ export const VslWrapper = styled.section`
     .vsl-description {
       font-size: 20px; /* Ajusta o tamanho da fonte */
       padding: 0 8px;
-    }
 
-    p {
-      font-size: 18px;
+      p {
+        font-size: 20px;
+      }
     }
   }
 

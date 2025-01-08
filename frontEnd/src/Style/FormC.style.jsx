@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
   width: 100%;
   max-width: 600px; /* Ajuste o tamanho máximo */
-  margin: 0 auto 100px;
+  margin: 0 auto 40px;
   padding: 20px;
   text-align: center;
 

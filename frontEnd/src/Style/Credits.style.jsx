@@ -29,7 +29,7 @@ export const Wrapper = styled.footer`
     padding: 15px 0;
 
     p {
-      font-size: 16px; /* Aumenta um pouco o tamanho da fonte em telas menores */
+      font-size: 15px; /* Aumenta um pouco o tamanho da fonte em telas menores */
     }
 
     a {
