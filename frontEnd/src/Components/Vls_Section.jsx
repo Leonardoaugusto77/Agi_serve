@@ -8,10 +8,10 @@ export default function Vsl() {
         {/* Descrição centralizada */}
         <div className="vsl-description">
           <p>
-            Sermos a parceira estratégica de escolha para empresas que buscam
-            transformar seus negócios através de soluções personalizadas em
-            gestão de pessoas, promovendo o crescimento e o bem-estar de todos
-            os envolvidos.
+            Buscamos ser uma opção estratégica para empresas interessadas em
+            transformar seus negócios por meio de soluções personalizadas em
+            gestão de pessoas, contribuindo para o crescimento e o bem-estar de
+            todos os envolvidos.
           </p>
         </div>
       </div>
