@@ -11,8 +11,6 @@ import {
 import Logo from "../Images/Logo.png"; // Logo da empresa
 
 const Footer = React.forwardRef((props, ref) => {
-  const { socialLinks } = props;
-
   return (
     <Wrapper ref={ref}>
       {/* Logo e Descrição */}
@@ -20,14 +18,14 @@ const Footer = React.forwardRef((props, ref) => {
         <div className="logo">
           <img
             src={Logo}
-            alt="Logo da Agi Serve, empresa especializada em terceirização de serviços de limpeza e manutenção"
+            alt="Logo da Agi Serv, empresa especializada em terceirização de serviços de limpeza e manutenção"
           />
         </div>
         <div className="description">
           <p>
-            A Agi Serve Terceirização de Mão de Obra está preparada para
-            realizar serviços de limpeza e manutenção de acordo com a
-            necessidade de seus clientes.
+            A Agi Serv Terceirização de Mão de Obra está preparada para realizar
+            serviços de limpeza e manutenção de acordo com a necessidade de seus
+            clientes.
           </p>
         </div>
       </LogoContainer>
@@ -36,22 +34,6 @@ const Footer = React.forwardRef((props, ref) => {
       <ContactContainer>
         <h3>Contatos</h3>
         <ul>
-          <li>
-            <a
-              href="tel:+5511987654321"
-              aria-label="Ligar para +55 11 98765-4321"
-            >
-              +55 11 98765-4321
-            </a>
-          </li>
-          <li>
-            <a
-              href="tel:+5511123456789"
-              aria-label="Ligar para +55 11 12345-6789"
-            >
-              +55 11 12345-6789
-            </a>
-          </li>
           <li>
             <a
               href="mailto:contato@agiserve.com"
@@ -69,7 +51,7 @@ const Footer = React.forwardRef((props, ref) => {
         <ul>
           <li>
             <a
-              href={socialLinks?.facebook}
+              href="https://www.facebook.com/profile.php?id=61571532427296"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visitar página do Facebook"
@@ -79,7 +61,7 @@ const Footer = React.forwardRef((props, ref) => {
           </li>
           <li>
             <a
-              href={socialLinks?.instagram}
+              href="https://www.instagram.com/agiservofc/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visitar página do Instagram"
@@ -89,7 +71,7 @@ const Footer = React.forwardRef((props, ref) => {
           </li>
           <li>
             <a
-              href={socialLinks?.linkedin}
+              href="https://www.linkedin.com/company/agiserv/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visitar página do LinkedIn"

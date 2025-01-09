@@ -15,11 +15,18 @@ const Services = React.forwardRef((props, ref) => {
 
   const services = [
     {
-      id: 1,
-      title: "Serviços de Copa",
+      id: 7,
+      title: "Limpeza e Conservação",
       description:
-        "Oferecemos serviços completos de copa, garantindo que seu ambiente esteja sempre organizado e pronto para atender às necessidades de colaboradores e clientes, com profissionalismo e eficiência.",
-      image: copaImage,
+        "Oferecemos serviços de limpeza e conservação que garantem ambientes sempre limpos, higienizados e agradáveis, tanto para empresas quanto para residências.",
+      image: limpezaConservacao,
+    },
+    {
+      id: 9,
+      title: "Limpeza Empresarial e Residencial",
+      description:
+        "Cuidamos da limpeza de ambientes empresariais e residenciais com excelência, oferecendo soluções personalizadas para cada necessidade e sempre com qualidade superior.",
+      image: limpezaEmpresarialResidencial,
     },
     {
       id: 2,
@@ -29,25 +36,11 @@ const Services = React.forwardRef((props, ref) => {
       image: limpezaPosObra,
     },
     {
-      id: 3,
-      title: "Portaria e Controle de Acessos",
+      id: 1,
+      title: "Serviços de Copa",
       description:
-        "Profissionais treinados para garantir segurança e organização no controle de acessos, proporcionando tranquilidade e um ambiente seguro para seu negócio ou condomínio.",
-      image: portariaEControle,
-    },
-    {
-      id: 4,
-      title: "Manutenção em Áreas Verdes",
-      description:
-        "Cuide do seu ambiente com nosso serviço de manutenção em áreas verdes, mantendo jardins e paisagismo impecáveis, proporcionando um ambiente agradável e bem-cuidado.",
-      image: manutencaoAreasVerdes,
-    },
-    {
-      id: 5,
-      title: "Manutenção Predial",
-      description:
-        "Realizamos serviços de manutenção preventiva e corretiva, assegurando o bom funcionamento de seu prédio e a preservação da estrutura, prevenindo danos e otimizando custos.",
-      image: manutencaoPredial,
+        "Oferecemos serviços completos de copa, garantindo que seu ambiente esteja sempre organizado e pronto para atender às necessidades de colaboradores e clientes, com profissionalismo e eficiência.",
+      image: copaImage,
     },
     {
       id: 6,
@@ -57,13 +50,6 @@ const Services = React.forwardRef((props, ref) => {
       image: recepcaoTelefonista,
     },
     {
-      id: 7,
-      title: "Limpeza e Conservação",
-      description:
-        "Oferecemos serviços de limpeza e conservação que garantem ambientes sempre limpos, higienizados e agradáveis, tanto para empresas quanto para residências.",
-      image: limpezaConservacao,
-    },
-    {
       id: 8,
       title: "Zeladoria para Condomínios",
       description:
@@ -71,11 +57,25 @@ const Services = React.forwardRef((props, ref) => {
       image: zeladoriaCondominios,
     },
     {
-      id: 9,
-      title: "Limpeza Empresarial e Residencial",
+      id: 3,
+      title: "Portaria e Controle de Acessos",
       description:
-        "Cuidamos da limpeza de ambientes empresariais e residenciais com excelência, oferecendo soluções personalizadas para cada necessidade e sempre com qualidade superior.",
-      image: limpezaEmpresarialResidencial,
+        "Profissionais treinados para garantir segurança e organização no controle de acessos, proporcionando tranquilidade e um ambiente seguro para seu negócio ou condomínio.",
+      image: portariaEControle,
+    },
+    {
+      id: 5,
+      title: "Manutenção Predial",
+      description:
+        "Realizamos serviços de manutenção preventiva e corretiva, assegurando o bom funcionamento de seu prédio e a preservação da estrutura, prevenindo danos e otimizando custos.",
+      image: manutencaoPredial,
+    },
+    {
+      id: 4,
+      title: "Manutenção em Áreas Verdes",
+      description:
+        "Cuide do seu ambiente com nosso serviço de manutenção em áreas verdes, mantendo jardins e paisagismo impecáveis, proporcionando um ambiente agradável e bem-cuidado.",
+      image: manutencaoAreasVerdes,
     },
   ];
 

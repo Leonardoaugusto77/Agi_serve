@@ -5,7 +5,7 @@ export default function Credits() {
   return (
     <Wrapper>
       <p>
-        Serviços de Limpeza em Curitiba – Agi Serve Terceirização de Mão de Obra
+        Serviços de Limpeza em Curitiba – Agi Serv Terceirização de Mão de Obra
         | Todos os Direitos Reservados | Desenvolvido e Otimizado por{" "}
         <a
           href="https://www.instagram.com/leonardoaugusto137/"
