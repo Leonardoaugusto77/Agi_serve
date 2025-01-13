@@ -18,11 +18,10 @@ export const WorkInWrapper = styled.div`
   /* Modal */
   .modal-content {
     background-color: #fff; /* Alterado para fundo branco */
-    padding: 30px;
-    border-radius: 2px;
-    width: 700px;
-    height: 620px;
-    max-width: 100%; /* Para dispositivos menores */
+    padding: 20px; /* Reduzi o padding para economizar espaço */
+    border-radius: 10px;
+    width: 600px; /* Ajustado para melhor visualização */
+    max-width: 100%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 10000;
@@ -59,7 +58,6 @@ export const WorkInWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
-    justify-content: center; /* Centraliza o conteúdo do formulário */
 
     .form-group {
       display: flex;
@@ -70,11 +68,10 @@ export const WorkInWrapper = styled.div`
         font-size: 16px;
         font-weight: bold; /* Deixa os títulos em negrito */
         color: #333; /* Cor preta para os títulos */
-        text-align: left; /* Alinha os títulos à esquerda */
       }
 
       input,
-      select, /* Adicionando estilo para o select */
+      select,
       textarea {
         padding: 12px;
         font-size: 16px;
@@ -114,7 +111,6 @@ export const WorkInWrapper = styled.div`
   @media (max-width: 768px) {
     .modal-content {
       width: 90%;
-      height: auto;
       padding: 15px;
     }
 
@@ -140,7 +136,6 @@ export const WorkInWrapper = styled.div`
   @media (max-width: 480px) {
     .modal-content {
       width: 90%;
-      height: auto;
       padding: 10px;
     }
 
