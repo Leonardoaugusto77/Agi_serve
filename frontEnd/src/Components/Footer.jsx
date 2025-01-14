@@ -36,10 +36,10 @@ const Footer = React.forwardRef((props, ref) => {
         <ul>
           <li>
             <a
-              href="mailto:contato@agiserve.com"
-              aria-label="Enviar email para contato@agiserve.com"
+              href="mailto:contato@agiserv.com.br"
+              aria-label="Enviar email para contato@agiserv.com.br"
             >
-              contato@agiserve.com
+              contato@agiserv.com.br
             </a>
           </li>
         </ul>

@@ -16,59 +16,52 @@ const FormC = React.forwardRef((props, ref) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    // Verificar se todos os campos estão preenchidos
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.serviceType
+    ) {
+      window.alert("Por favor, preencha todos os campos."); // Aviso de preenchimento obrigatório
+      return;
+    }
+
+    // Preencher o campo 'nome' do Google Forms via iframe
+    const googleNameField = document.querySelector(".KHxj8b.tL9Q4c input"); // Usando a classe do campo de nome
+    if (googleNameField) {
+      googleNameField.value = formData.name; // Preencher o campo com o valor do 'name'
+    }
+
+    try {
+      console.log(formData); // Aqui você pode fazer a lógica de envio, como uma requisição ao back-end
+      window.alert("Dados enviados com sucesso!"); // Sucesso
+      setFormData({ name: "", email: "", phone: "", serviceType: "" }); // Reseta os inputs
+    } catch (error) {
+      console.error("Erro ao enviar os dados:", error);
+      window.alert("Falha ao enviar os dados. Tente novamente."); // Falha
+    }
   };
 
   return (
     <Wrapper ref={ref}>
       <h2>Solicite seu orçamento!</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Nome:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">E-mail:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="phone">Telefone:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="serviceType">Descrição do Serviço:</label>
-          <textarea
-            id="serviceType"
-            name="serviceType"
-            value={formData.serviceType}
-            onChange={handleChange}
-            rows="4"
-            required
-          />
-        </div>
-        <button type="submit">Solicitar orçamento</button>
-      </form>
+
+      {/* Formulário com o iframe do Google Forms */}
+      <div className="google-form-container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScCKeEsTGTb0CytZoSz1XJyhrlCWAxUDyvWqy9AaZhfVpQz8Q/viewform?embedded=true"
+          width="100%"
+          height="1000px"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+          title="Formulário de Orçamento"
+        >
+          Carregando…
+        </iframe>
+      </div>
     </Wrapper>
   );
 });

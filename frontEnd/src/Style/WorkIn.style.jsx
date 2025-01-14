@@ -8,27 +8,27 @@ export const WorkInWrapper = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Escurecendo o fundo */
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
-    justify-content: center; /* Centraliza o modal */
-    align-items: center; /* Centraliza verticalmente */
-    z-index: 9999; /* Garante que o modal fique acima de outros conteúdos */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
   }
 
   /* Modal */
   .modal-content {
-    background-color: #fff; /* Alterado para fundo branco */
-    padding: 20px; /* Reduzi o padding para economizar espaço */
+    background-color: #f1f1f1;
+    padding: 20px;
     border-radius: 10px;
-    width: 600px; /* Ajustado para melhor visualização */
+    width: 65%; /* Ajustando a largura para melhor responsividade */
     max-width: 100%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 10000;
-    color: #333; /* Cor do texto preta */
+    color: #333;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Garante que o conteúdo fique bem distribuído */
+    justify-content: space-between;
   }
 
   /* X de fechamento */
@@ -42,119 +42,109 @@ export const WorkInWrapper = styled.div`
     border: none;
     font-size: 24px;
     color: red;
-    cursor: pointer; /* Adicionando cursor para indicar que é clicável */
+    cursor: pointer;
   }
 
   /* Título */
   h2 {
     margin-bottom: 20px;
-    font-size: 24px;
-    text-align: center; /* Título centralizado */
-    color: #032541; /* Cor do título */
+    font-size: 26px;
+    text-align: center;
+    color: #032541;
   }
 
-  /* Formulário */
-  form {
+  /* Contêiner do iframe */
+  .iframe-container {
+    width: 100%; /* Diminuindo a largura do iframe */
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção de 16:9 */
+    position: relative;
+    overflow: hidden;
+    background: #f1f1f1;
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo */
+  }
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+  /* Estilo do iframe */
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-      label {
-        font-size: 16px;
-        font-weight: bold; /* Deixa os títulos em negrito */
-        color: #333; /* Cor preta para os títulos */
-      }
+  /* Contêiner do Spinner e da Mensagem */
+  .loading-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza os itens na coluna (spinner + mensagem) */
+    text-align: center; /* Centraliza o texto da mensagem */
+  }
 
-      input,
-      select,
-      textarea {
-        padding: 12px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        width: 100%; /* Ajustado para 100% para ocupar toda a largura da modal */
-      }
+  /* Estilo para a mensagem de carregamento */
+  .loading-message {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+  }
 
-      input[type="file"] {
-        padding: 5px;
-        font-size: 14px;
-        border: none;
-        background-color: transparent;
-      }
+  /* Estilo para o círculo de carregamento */
+  .spinner {
+    border: 8px solid #f3f3f3; /* Cor de fundo do círculo */
+    border-top: 8px solid #3498db; /* Cor da parte giratória */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite; /* Define o tempo de animação */
+  }
+
+  /* Animação do círculo */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
     }
-
-    button {
-      width: 300px;
-      height: 50px;
-      padding: 12px;
-      background-color: #032541;
-      color: white;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      align-self: center; /* Garante que o botão de envio fique centralizado */
-
-      &:hover {
-        background-color: #0056b3;
-      }
+    100% {
+      transform: rotate(360deg);
     }
   }
 
-  /* Responsividade para dispositivos menores */
+  /* Responsividade */
   @media (max-width: 768px) {
     .modal-content {
-      width: 90%;
-      padding: 15px;
+      width: 100%;
     }
 
     h2 {
       font-size: 20px;
     }
 
-    .form-group label {
-      font-size: 14px;
-    }
-
-    input,
-    select,
-    textarea {
-      font-size: 14px;
-    }
-
-    button {
-      font-size: 16px;
+    .iframe-container {
+      width: 100%; /* Ajustando a largura para telas menores */
+      padding-bottom: 75%; /* Ajuste para telas menores */
     }
   }
 
   @media (max-width: 480px) {
     .modal-content {
-      width: 90%;
-      padding: 10px;
+      width: 100%;
     }
 
     h2 {
       font-size: 18px;
     }
 
-    .form-group label {
-      font-size: 12px;
-    }
-
-    input,
-    select,
-    textarea {
-      font-size: 12px;
-    }
-
-    button {
-      font-size: 14px;
+    .iframe-container {
+      width: 100%; /* Ajuste para telas muito pequenas */
+      padding-bottom: 85%; /* Ajuste para telas muito pequenas */
     }
   }
 `;
